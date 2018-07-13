@@ -1,0 +1,22 @@
+{
+  "name": "star-wars-app",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://paulo-raoni.github.io/star-wars-planets",
+  "dependencies": {
+    "@material-ui/core": "^1.3.1",
+    "gh-pages": "^1.2.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4",
+    "styled-components": "^3.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+}
