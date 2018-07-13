@@ -1,8 +1,3 @@
-
-# star-wars-planets
-Random planets with respective infos to make quiz games
-=======
-
 # Star Wars Planets
 This project was bootstrapped with Create React App.
 
