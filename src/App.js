@@ -9,6 +9,7 @@ class App extends Component {
 
     this.state = {
       isFetching: false,
+      error: null,
       planetInfo: null,
       quotes: null
     }
@@ -58,7 +59,11 @@ class App extends Component {
              }
              console.dir(planetFetched)
              this.setState({isFetching: false, planetInfo: planetFetched})
-           }).catch(err => console.log(err))
+           }).catch(err => {
+             this.setState({isFetching: false, error: true})
+             console.dir(err)
+           }
+            )
       
   }
 
@@ -67,6 +72,7 @@ class App extends Component {
       <div className="App">
         <ComponentsContent
           planetInfo={this.state.planetInfo}
+          error={this.state.error}
           isFetching={this.state.isFetching}
           nextPlanet={()=> this.nextPlanet()}
           getQuotes={()=> this.getQuotes()}

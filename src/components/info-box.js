@@ -122,6 +122,7 @@ const InfoBox = ({planetInfo}) => {
                             (planetInfo.films === 1 ? (planetInfo.films + " FILM") : planetInfo.films + " FILMS")} `
                     }
                 </span>
+                
             </PlanetBody>
         </div>
     </PlanetBox>

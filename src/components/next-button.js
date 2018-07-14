@@ -6,7 +6,7 @@ const StyledDiv = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 40px;
-
+  margin-bottom: 50px;
   > button {
     width: 100px;
     height: 50px;

@@ -1,22 +1,24 @@
 import React from 'react'
-import { PropTypes } from 'prop-types';
+import { PropTypes } from 'prop-types'
 import InfoBox from './info-box'
-import NextButton from './next-button';
+import NextButton from './next-button'
 import styled from 'styled-components'
-import Header from './header';
-import Loading from './loading';
-import Signature from './signature';
+import Header from './header'
+import Loading from './loading'
+import Signature from './signature'
+import FetchError from './fetch-error'
 
 const ComponentsContainer = styled.div`
     margin: 2% 5% 0;
     
     @media(max-width: 500px) {
-        margin: 5% 10%;
+        margin: 2% 10%;
     }
 `
 
 const ComponentsContent = ({
-    planetInfo, 
+    planetInfo,
+    error,
     isFetching,
     nextPlanet,
     getQuotes
@@ -28,7 +30,8 @@ const ComponentsContent = ({
             {isFetching === true && 
                 <Loading quote={getQuotes()} ></Loading>
             }
-            {!!planetInfo && !isFetching && <InfoBox planetInfo={planetInfo}/>}           
+            {!!planetInfo && !isFetching && <InfoBox planetInfo={planetInfo}/>}  
+            {!!error && !isFetching && <FetchError error={error}></FetchError>}         
             {<NextButton isDisabled={isFetching} nextPlanet={nextPlanet}/>}
             {<Signature></Signature>}
         </ComponentsContainer>

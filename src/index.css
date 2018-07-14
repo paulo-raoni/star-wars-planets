@@ -1,9 +1,15 @@
+html {
+  background: black url("./img/star-background.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
   font-family: sans-serif;
-  background: url("./img/star-background.jpg") no-repeat fixed center;
-  background-size: cover;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Geostar|Michroma|Monoton');
@@ -12,7 +18,3 @@ body {
   font-family: Starjout;
   src: url('fonts/starjout/Starjout.ttf');
 }
-
-/* font-family: 'Geostar', cursive;
-font-family: 'Monoton', cursive;
-font-family: 'Michroma', sans-serif; */
